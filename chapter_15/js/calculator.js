@@ -86,8 +86,8 @@ $(function() {
 		}
 
 		// Display the results
-		$('#results').html('The total is <strong>$' + total + '</strong>.');
-
+		$('#result').html('The total is <strong>$' + total + '</strong>.');
+		
 		// Return false to prevent an actual form submission
 		return false;		
 	}); // End of form submission

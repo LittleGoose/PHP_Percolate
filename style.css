@@ -11,6 +11,8 @@ h4 {
 #head {
 	text-align: center;
 	font-family: arial;
+	background-color: #C0C0C0;
+	border: 10px 5px 0px 5px #C0C0C0 solid;
 }
 
 #main {
