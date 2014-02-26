@@ -9,11 +9,11 @@
     </head>
     <body>
  
-        <nav id="head">       
+        <div id="head">       
             <h1>Exercise from the book "PHP and MySQL for Dynamic Websites" by Larry Ullman</h1>
             <h2>Site by Jesse Evers</h2><br />
-        </nav>
-        <nav id="main">
+        </div>
+        <div id="main">
             <h4>Chapter 1</h4>
 
             <a href="http://jesseevers.zxq.net/chapter_1/template.html">template.html - 1.1</a><br />
@@ -53,9 +53,16 @@
 
             <h4>Chapter 8</h4>
 
+            <a href="http://jesseevers.zxq.net/chapter_8/display_errors.php">display_errors.php - 8.1</a><br />
+            <a href="http://jesseevers.zxq.net/chapter_8/report_errors.php">report_errors.php - 8.2</a><br />
+            <a href="http://jesseevers.zxq.net/chapter_8/handle_errors.php">handle_errors.php - 8.3</a><br />
 
             <h4>Chapter 9</h4>
 
+            <a href="http://jesseevers.zxq.net/chapter_9/index.php">index.php - 9.1</a><br />
+            <a href="http://jesseevers.zxq.net/chapter_9/register.php">register.php - 9.5</a><br />
+            <a href="http://jesseevers.zxq.net/chapter_9/view_users.php">view_users.php - 9.6</a><br />
+            <a href="http://jesseevers.zxq.net/chapter_9/password.php">password.php - 9.7</a><br />
 
             <h4>Chapter 10</h4>
 
@@ -78,6 +85,6 @@
             # Created by Jesse Evers
 
             ?>
-        </nav>
+        </div>
     </body>
 </html>
