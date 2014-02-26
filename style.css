@@ -1,0 +1,18 @@
+html {
+	border: 10px solid #6f6f6f;
+	font-family: Georgia;
+}
+
+h4 {
+	color: green;
+	font-family: verdana;
+}
+
+#head {
+	text-align: center;
+	font-family: arial;
+}
+
+#main {
+	padding-left: 30px;
+}
