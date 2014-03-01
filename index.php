@@ -98,6 +98,10 @@
 
             <h4>Chapter 15</h4>
 
+            <a href="http://jesseevers.com/chapter_15/test.html">test.html - 15.3</a><br />     
+            <a href="http://jesseevers.com/chapter_15/calculator.php">calculator.php - 15.6</a><br />
+            <a href="http://jesseevers.com/chapter_15/login.php">login.php - 15.8</a><br />       
+
             <?php 
             # Created by Jesse Evers
 
