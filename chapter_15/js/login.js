@@ -22,10 +22,10 @@ $(function {
 		email = $('#email').val().length >= 6 {
 
 			// Get the email address
-			eamil = $('#email').val();
+			email = $('#email').val();
 
 			// Clear an error, if one existed
-			#('#emailP').addClass('error');
+			$('#emailP').addClass('error');
 
 			// Hide the error message if it was visible
 			$('#emailError').hide();
@@ -42,10 +42,10 @@ $(function {
 		password = $('#password').val().length >= 6 {
 
 			// Get the password address
-			eamil = $('#password').val();
+			password = $('#password').val();
 
 			// Clear an error, if one existed
-			#('#passwordP').addClass('error');
+			$('#passwordP').addClass('error');
 
 			// Hide the error message if it was visible
 			$('#passwordError').hide();
