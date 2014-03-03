@@ -17,15 +17,15 @@
     		# Validate the data (omitted)!
 
     		# Connect to the database
-    		$mysqli = new MySQLi('localhost', 'jesseevers', 'EY4JKepT', 'forum');
+    		$mysqli = new MySQLi('localhost', 'jesseevers', 'EY4JKepT', 'jesseevers_forum');
             $mysqli->set_charset('utf8');
 
     		# Make the query
     		$q = 'INSERT INTO messages(forum_id, parent_id, user_id, subject, body, date_entered) VALUES (?, ?, ?, ?, ?, NOW())';
 
     		# Prepare the statement
-    		$stmt = mysqli->prepare($q);
-
+    		$stmt = $mysqli->prepare($q);
+            
     		# Bind the variables
     		$stmt->bind_param('iiiss', $forum_id, $parent_id, $user_id, $subject, $body);
 

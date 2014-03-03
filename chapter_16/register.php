@@ -21,21 +21,21 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 	if (empty($_POST['first_name'])) {
 		$errors[] = 'You forgot to enter your first name.';
 	} else {
-		$fn = mysqli->real_escape_string(trim($_POST['first_name']));
+		$fn = $mysqli->real_escape_string(trim($_POST['first_name']));
 	}
 
 	# Check for a last name
 	if (empty($_POST['last_name'])) {
 		$errors[] = 'You forgot to enter your last name.';
 	} else {
-		$ln = mysqli->real_escape_string(trim($_POST['last_name']));
+		$ln = $mysqli->real_escape_string(trim($_POST['last_name']));
 	}
 
 	# Check for an email address
 	if (empty($_POST['email'])) {
 		$errors[] = 'You forgot to enter your email address.';
 	} else {
-		$e = mysqli->real_escape_string(trim($_POST['email']));
+		$e = $mysqli->real_escape_string(trim($_POST['email']));
 	} 
 
 	# Validate the passwords
@@ -43,7 +43,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 		if ($_POST['pass1'] != $_POST['pass2']) {
 			$errors[] = 'Your password did not match the confirmed password.';
 		} else {
-			$p = mysqli->real_escape_string(trim($_POST['pass1']));
+			$p = $mysqli->real_escape_string(trim($_POST['pass1']));
 		}
 	} else {
 		$errors[] = 'You forgot to enter your password.';
@@ -70,7 +70,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 			<p class="error">You could not be registered due to a system error. We apologize for any inconvenience.</p>';
 
 			# Debugging message
-			echo '<p>' . mysqli->error . '<br><br>Query: ' . $q . '</p>';
+			echo '<p>' . $mysqli->error . '<br><br>Query: ' . $q . '</p>';
 		} # End of if ($r) IF.
 
 		$mysqli->close(); # Close the database connection

@@ -15,7 +15,7 @@ require ('../../mysqli_oop_connect.php'); # Connect to the database
 
 # Make the query
 $q = "SELECT CONCAT(last_name, ', ', first_name) AS name, DATE_FORMAT(registration_date, '%M %d, %Y') AS dr FROM users ORDER BY registration_date ASC";
-$r = mysqli->query($q); # Run the query
+$r = $mysqli->query($q); # Run the query
 
 # Count the number of returned rows
 $num = $r->num_rows;
