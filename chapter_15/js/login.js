@@ -7,7 +7,7 @@
 // This script then ames an Ajax request of login_ajax.php
 
 // Do something when the document is ready
-$(function {
+$(function() {
 
 	// Hide all error messages
 	$('.errorMessage').hide();
@@ -19,7 +19,7 @@ $(function {
 		var email, password;
 
 		// Validate the email address
-		email = $('#email').val().length >= 6 {
+		if($('#email').val().length >= 6) {
 
 			// Get the email address
 			email = $('#email').val();
@@ -39,7 +39,7 @@ $(function {
 		}
 
 		// Validate the password 
-		password = $('#password').val().length >= 6 {
+		if($('#password').val().length > 0) {
 
 			// Get the password address
 			password = $('#password').val();

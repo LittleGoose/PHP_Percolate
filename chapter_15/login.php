@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="description" content="">
-		<title>Widget Cost Calculator</title>
+		<title>Login</title>
 		<link rel="Shortcut Icon" href="/favicon.ico"/> 
 		<link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -11,7 +11,6 @@
 	</head>
 	<body>
 		<!-- Script 15.8 - login.php -->
-		<h1>Widget Cost Calculator</h1>
 		<p id="results"></p>
 		<form action="login.php" method="post" id="login">
 			<p id="emailP">Email Address: <input type="text" name="email" id="email">
