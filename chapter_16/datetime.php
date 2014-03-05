@@ -65,11 +65,28 @@
 
     			# Determine the interval
     			$interval - $start->diff($end);
+
+    			# Print the results
+    			echo "<p>The event has been planned starting on {$start->format($format)} and ending on {$end->format($format)}, which is a period of $interval->days day(s).</p>";
+    		} else { # End date must be later
+    			echo '<p class="error">The starting date must preced the ending date.</p>';
     		}
 
+    	} else { # An invalid date
+    		echo '<p class="error">One or both of the submitted dates was invalid.</p>';
     	}
-    }
+    } # End of form submission
 
+    # Show the form
     ?>
+    	<h2>Set the Start and End Dates for the Thing</h2>
+   		<form action="datetime.php" method="post">
+    	
+    		<p><label for="start_date">Start Date:</label> <input type="text" name="start_date" value="<?php echo $start->format($format); ?>"> (MM/DD/YYYY)</p>
+    		<p><label for="end_date">End Date:</label> <input type="text" name="end_date" value="<?php echo $end->format($format); ?>"> (MM/DD/YYYY)</p>
+
+    		<p><input type="submit" value="Submit"></p>
+
+    	</form>
 	</body>
 </html>
