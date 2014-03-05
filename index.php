@@ -102,6 +102,13 @@
             <a href="http://jesseevers.com/chapter_15/calculator.html">calculator.html - 15.6</a><br />
             <a href="http://jesseevers.com/chapter_15/login.php">login.php - 15.8</a><br />       
 
+            <h4>Chapter 16</h4>
+
+            <a href="http://jesseevers.com/chapter_16/register.php">register.php - 16.2</a><br />       
+            <a href="http://jesseevers.com/chapter_16/view_users.php">view_users.php - 16.3</a><br />       
+            <a href="http://jesseevers.com/chapter_16/post_message.php">post_message.php - 16.4</a><br />       
+            <a href="http://jesseevers.com/chapter_16/datetime.php">datetime.php - 16.5</a><br />       
+
             <?php 
             # Created by Jesse Evers
 
