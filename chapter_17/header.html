@@ -1,0 +1,25 @@
+<?php 
+# Script 17.1
+# Made by Jesse Evers
+# Made on 3/7/14
+
+/* This script
+ * - starts the HTML template
+ * - indicates the encoding using header()
+ * - starts the ession
+ * - gets the language-specific words from the database
+ * - lists the available languages
+*/
+
+# Indicate the encoding
+header('Content-Type: text/html;
+charset=UTF-8');
+
+# Start the session
+session_start();
+
+# For testing purposes:
+$_SESSION['user_id'] = 1;
+$_SESSION['user_tz'] = 'America/New York';
+
+?>
