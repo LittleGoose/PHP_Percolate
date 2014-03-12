@@ -4,10 +4,11 @@
 # Made on 3/12/14
 
 # This page shows the messages in a thread
+include('includes/header.html');
 
 # Check for a thread ID
 $tid = FALSE;
-if(isset($_GET['tid']) && filter_var($_GET['tid'], FILTER_VAR_INT, array('min_range' => 1))) {
+if(isset($_GET['tid']) && filter_var($_GET['tid'], FILTER_VALIDATE_INT, array('min_range' => 1))) {
 
 	# Create a shorthand version of the thread ID
 	$tid = $_GET['tid'];
@@ -21,7 +22,7 @@ if(isset($_GET['tid']) && filter_var($_GET['tid'], FILTER_VAR_INT, array('min_ra
 
 	# Run the query
 
-	$q = "SELECT t.subject, p.message, username, DATE_FORMAT($posted, '%e-%b-%y %l:%i %p') AS posted FROM threads AS t LEFT JOIN posts AS p USING (thread_id) INNER JION users AS u ON p.user_id = u.user_id WHERE t.thread_id = $tid ORDER BY p.posted_on ASC";
+	$q = "SELECT t.subject, p.message, username, DATE_FORMAT($posted, '%e-%b-%y %l:%i %p') AS posted FROM threads AS t LEFT JOIN posts AS p USING (thread_id) INNER JOIN users AS u ON p.user_id = u.user_id WHERE t.thread_id = $tid ORDER BY p.posted_on ASC";
 	$r = mysqli_query($dbc, $q);
 	if(!(mysqli_num_rows($r) > 0)) {
 		$tid = FALSE; # Invalid thread ID
