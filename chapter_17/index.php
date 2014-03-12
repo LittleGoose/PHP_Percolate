@@ -12,5 +12,5 @@ include('includes/header.html');
 echo $words['intro'];
 
 # Include the HTML footer file
-include ('includes/footer.hmtl');
+include ('includes/footer.html');
 ?>
