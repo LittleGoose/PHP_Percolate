@@ -47,12 +47,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 			$r = mysqli_query($dbc, $q);
 			if(mysqli_affected_rows($dbc) == 1) {
 				$tid = mysqli_insert_id($dbc);
+				echo '<p>Your post has been entered.</p>';
 			} else {
 				echo '<p>Your post could not be handled due to a system error.</p>';
 			}
-		} # No $tid
-
-		if($tid) { # Add this to the replies table
+		} elseif($tid) { # Add this to the replies table
 			$q = "INSERT INTO posts (lang_id, user_id, message, posted_on) VALUES ($tid, {$_SESSION['user_id']}, '" . mysqli_real_escape_string($dbc, $body) . "', UTC_TIMESTAMP())";
 			$r = mysqli_query($dbc, $q);
 			if(mysqli_affected_rows($dbc) == 1) {
@@ -60,7 +59,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 			} else {
 				echo '<p>Your post could not be handled due to a system error.</p>';
 			}
-		} # Valid $tid
+		} 
 
 	} else { # Include the form
 		include('includes/post_form.php');

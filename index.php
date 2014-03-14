@@ -109,6 +109,11 @@
             <a href="http://jesseevers.com/chapter_16/post_message.php">post_message.php - 16.4</a><br />       
             <a href="http://jesseevers.com/chapter_16/datetime.php">datetime.php - 16.5</a><br />       
 
+            <h4>Chapter 17</h4>
+
+            <a href="http://jesseevers.com/chapter_17/index.php">index.php - 17.3</a><br />   
+            <a href="http://jesseevers.com/chapter_17/forum.php">forum.php - 17.4</a><br />       
+
             <?php 
             # Created by Jesse Evers
 
