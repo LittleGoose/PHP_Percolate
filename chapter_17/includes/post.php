@@ -40,8 +40,20 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 
 		# Add the message to the database
 
+		
+
 		if(!$tid) { # Create new thread
-			$q = "INSERT INTO threads (lang_id, user_id, subject) VALUES ($tid, {$_SESSION['lid']}, {$_SESSION['user_id']}, '" . mysqli_real_escape_string($dbc, $body) . "', UTC_TIMESTAMP())";
+			$q = "INSERT INTO threads (lang_id, user_id, subject) VALUES ({$_SESSION['lid']}, {$_SESSION['user_id']}, '" . mysqli_real_escape_string($dbc, $subject) . "')";
+			$r = mysqli_query($dbc, $q);
+			if(mysqli_affected_rows($dbc) == 1) {
+				$tid = mysqli_insert_id($dbc);
+			} else {
+				echo '<p>Your post could not be handled due to a system error.</p>';
+			}
+		} # No $tid
+
+		if($tid) { # Add this to the replies table
+			$q = "INSERT INTO posts (lang_id, user_id, message, posted_on) VALUES ($tid, {$_SESSION['user_id']}, '" . mysqli_real_escape_string($dbc, $body) . "', UTC_TIMESTAMP())";
 			$r = mysqli_query($dbc, $q);
 			if(mysqli_affected_rows($dbc) == 1) {
 				echo '<p>Your post has been entered.</p>';
@@ -49,6 +61,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 				echo '<p>Your post could not be handled due to a system error.</p>';
 			}
 		} # Valid $tid
+
 	} else { # Include the form
 		include('includes/post_form.php');
 	}
