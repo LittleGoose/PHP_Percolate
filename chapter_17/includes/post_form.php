@@ -25,7 +25,7 @@ if(isset($_SESSION['user_id'])) {
 		echo '<h3>' . $words['post_a_reply'] . '</h3>';
 
 		# Add the thread ID as a hidden input
-		echo '<input name="tid" type="hidden" value="' . $tid . '">';
+		echo '<input name="tid" type="hidden" value="' . $tid . '" />';
 	} else { # New thread
 
 		# Print a caption
@@ -38,7 +38,7 @@ if(isset($_SESSION['user_id'])) {
 			echo "value=\"$subject\" ";
 		}
 
-		echo '></p>';
+		echo ' /></p>';
 	} # End of $tid IF
 
 	# Create the body textarea
@@ -51,7 +51,7 @@ if(isset($_SESSION['user_id'])) {
 	echo '</textarea></p>';
 
 	# Finish the form
-	echo '<input name="submit" type="submit" value="' . $words['submit'] . '">
+	echo '<input name="submit" type="submit" value="' . $words['submit'] . '" />
 	</form>';
 } else {
 	echo '<p>You must be logged in to post messages.</p>';
