@@ -4,8 +4,9 @@
 # Made on 3/24/14
 
 # This is the login page for the site
-
-require('includes/header.html');
+require('includes/config.inc.php');
+$page_title = 'Login';
+include('includes/header.html');
 
 if($_SERVER['REQUEST_METHOD'] == 'POST')
 {
@@ -40,10 +41,32 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 			mysqli_close($dbc);
 
 			# Redirect the user
-			$url = BASE_URL . 'index.php';
+			$url = BASE_URL . 'chapter_18/index.php';
 			# Define the URL
-			ob_end_clean($dbc);
+			ob_end_clean($dbc); # Delete the buffer
+			header("Location: $url");
+			exit(); # Quit the script
+		} else { # No match was made
+			echo '<p class="error">Either the email address and password entered do not match those on file or you have not yet activated your account.</p>';
 		}
+	} else { # If everything wasn't OK
+		echo '<p class="error">Please try again</p>';
 	}
-}
+
+	mysqli_close($dbc);
+} # End of SUBMIT conditional
+?>
+
+<h1>Login</h1>
+<p>Your browser must allow cookies in order to log in.</p>
+<form action="login.php" method="post">
+	<fieldset>
+		<p><strong>Email Address:</strong> <input type="text" name="email" size="20" maxlength="60"></p>
+		<p><strong>Password:</strong> <input type="text" name="pass" size="20" maxlength="20"></p>
+		<div align="center"><input type="submit" name="submit" value="Login"></div>
+	</fieldset>
+</form>
+
+<?php
+include('includes/footer.html');
 ?>

@@ -16,7 +16,7 @@
 	define('LIVE', FALSE);
 
 	# Admin contact address
-	define('EMAIL', 'InsertRealAddressHere');
+	define('EMAIL', 'jesse27999@gmail.com');
 
 	# Site URL (base for all redirections)
 	define('BASE_URL', 'http://www.jesseevers.com/');
