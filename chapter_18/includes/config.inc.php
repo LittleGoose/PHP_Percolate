@@ -19,7 +19,7 @@
 	define('EMAIL', 'InsertRealAddressHere');
 
 	# Site URL (base for all redirections)
-	define('BASE_URL', 'http://www.example.com/');
+	define('BASE_URL', 'http://www.jesseevers.com/');
 
 	# Location of the MySQL connection script 
 	define('MYSQL', '../../mysqli_connect3.php');

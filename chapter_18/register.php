@@ -70,12 +70,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 			if(mysqli_affected_rows($dbc) == 1) { # If it ran OK
 
 				# Send the email
-				$body = "Thank you for registering at <whatever site>. To activate your account, please clikc on this link:\n\n";
-				$body .= BASE_URL . 'activate.php?x=' . urlencode($e) . "&y=$a";
+				$body = "Thank you for registering at <whatever site>. To activate your account, please click on this link:\n\n";
+				$body .= BASE_URL . 'chapter_18/activate.php?x=' . urlencode($e) . "&y=$a";
 				mail($trimmed['email'], 'Registration Confirmation', $body, 'From: admin@sitename.com');
 
 				# Finish the page
-				echo '<h3>Thank you for registering! A confirmation email has been sent to your address. Please clikc on the link in that email in order to activate your account.</h3>';
+				echo '<h3>Thank you for registering! A confirmation email has been sent to your address. Please click on the link in that email in order to activate your account.</h3>';
 				include('includes/footer.html'); # Include the HTML footer
 				exit();
 			} else { # If it did not run ok
