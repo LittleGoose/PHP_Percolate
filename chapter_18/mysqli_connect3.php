@@ -10,7 +10,7 @@
 DEFINE('DB_USER', 'jesseevers');
 DEFINE('DB_PASSWORD', 'EY4JKepT');
 DEFINE('DB_HOST', 'localhost');
-DEFINE('DB_NAME', 'ch18');
+DEFINE('DB_NAME', 'jesseevers_ch18');
 
 # Make the connection
 $dbc = @mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
