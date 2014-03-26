@@ -112,7 +112,11 @@
             <h4>Chapter 17</h4>
 
             <a href="http://jesseevers.com/chapter_17/index.php">index.php - 17.3</a><br />   
-            <a href="http://jesseevers.com/chapter_17/forum.php">forum.php - 17.4</a><br />       
+            <a href="http://jesseevers.com/chapter_17/forum.php">forum.php - 17.4</a><br />
+
+            <h4>Chapter 18</h4>
+
+            <a href="http://jesseevers.com/chapter_18/index.php">index.php - 18.5</a><br />            
 
             <?php 
             # Created by Jesse Evers
