@@ -27,7 +27,7 @@
     			$ln = trim($_POST['last_name']);
 
     			# Add the artist to the database
-    			require('../../mysqli_connect4.php');
+    			require('../../../mysqli_connect4.php');
     			$q = 'INSERT INTO artists (first_name, middle_name, last_name) VALUES (?, ? ,?)';
     			$stmt = mysqli_prepare($dbc, $q);
     			mysqli_stmt_bind_param($stmt, 'sss', $fn, $mn, $ln);

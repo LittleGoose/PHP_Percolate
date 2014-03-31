@@ -9,10 +9,10 @@
 $page_title = 'Browse the Prints';
 include('includes/header.html');
 
-require('../../mysqli_connect4.php;');
+require('../../mysqli_connect4.php');
 
 # Default query for this page
-$q = "SELECT artists.artist_id, CONCAT_WS(' ', first_name, middle_name, last_name) AS artist, print_name, price, description, print_id FROM artists, prints WHERE artists.artist_id = prints.artist_id ORDER BY artist.last_name ASC, prints.print_name ASC";
+$q = "SELECT artists.artist_id, CONCAT_WS(' ', first_name, middle_name, last_name) AS artist, print_name, price, description, print_id FROM artists, prints WHERE artists.artist_id = prints.artist_id ORDER BY artists.last_name ASC, prints.print_name ASC";
 
 # Are we looking at a particular artist?
 if(isset($_GET['aid']) && filter_var($_GET['aid'], FILTER_VALIDATE_INT, array('min_range' => 1))) {
@@ -34,7 +34,7 @@ $r = mysqli_query($dbc, $q);
 while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
 	
 	# Display each record
-	echo "\<tr>
+	echo "<tr>
 		<td align=\"left\"><a href=\"view_print.php?aid={$row['artist_id']}\">{$row['artist']}</a></td>
 		<td align=\"left\"><a href=\"view_print.php?pid={$row['print_name']}\">{$row['description']}</a></td>
 		<td align=\"left\">{$row['description']}</td>

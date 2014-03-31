@@ -99,7 +99,7 @@
     	} # End of errors IF
 
     	# Delete the uploaded file if it still exists
-    	if(isset($temp) && file_exists($temp) $$ is_file($temp)) {
+    	if(isset($temp) && file_exists($temp) && is_file($temp)) {
     		unlink($temp);
     	}
     } # End of the submission IF
@@ -148,7 +148,7 @@
 
 					<p><strong>Size:</strong> <input type="text" name="size" size="30" maxlength="60" value="<?php if(isset($_POST['size'])) echo htmlspecialchars($_POST['size']); ?>"> (optional)</p>
 
-					<p><strong>Description:</strong> <textarea name="description" cols="40" rows="5"><?php if(isset($_POST['description']; ?></textarea> (optional)</p>
+					<p><strong>Description:</strong> <textarea name="description" cols="40" rows="5"><?php if(isset($_POST['description'])) echo $_POST['description']; ?></textarea> (optional)</p>
 
 			</fieldset>
 
