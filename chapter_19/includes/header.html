@@ -1,0 +1,32 @@
+<?php 
+# Script 19.3
+# Made by Jesse Evers
+# Made on 3/31/14
+
+# This page begins the session, the HTML page, and the layout table
+
+session_start(); # Start a session
+?>
+<!DOCTYPE HTML>
+<html lang="en">  
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="">
+		<meta http-equiv="content-type" content="text/html; charset=utf8">
+		<title><?php echo isset($page_title)) ? $page_title : 'Welcome!'; ?></title>
+		<link rel="Shortcut Icon" href="/favicon.ico"/> 
+	</head>
+	<body>
+		<table cellspacing="0" cellpadding="0" border="0" align="center" width="600">
+			<tr>
+				<td align="center" colspan="3"><img src="images/title.jpg" width="600" height="61" border="0" alt="title"></td>
+			</tr>
+			<tr>
+				<td><a href="chapter_19/index.php"><img src="images/home.jpg" width="200" height="39" border="0" alt="home page"></a></td>
+				<td><a href="chapter_19/browse_prints.php"><img src="images/prints.jpg" width="200" height="39" border="0" alt="view the prints"></a></td>
+				<td><a href="chapter_19/view_cart.php"><img src="images/prints.jpg" width="200" height="39" border="0" alt="view your cart"></a></td>
+			</tr>
+			<tr>
+				<td></td>
+			</tr>
+		</table>
