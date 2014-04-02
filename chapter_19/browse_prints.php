@@ -35,8 +35,8 @@ while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
 	
 	# Display each record
 	echo "<tr>
-		<td align=\"left\"><a href=\"view_print.php?aid={$row['artist_id']}\">{$row['artist']}</a></td>
-		<td align=\"left\"><a href=\"view_print.php?pid={$row['print_name']}\">{$row['description']}</a></td>
+		<td align=\"left\"><a href=\"browse_prints.php?aid={$row['artist_id']}\">{$row['artist']}</a></td>
+		<td align=\"left\"><a href=\"view_print.php?pid={$row['print_id']}\">{$row['print_name']}</a></td>
 		<td align=\"left\">{$row['description']}</td>
 		<td align=\"right\">{$row['price']}</td>
 	</tr>\n";

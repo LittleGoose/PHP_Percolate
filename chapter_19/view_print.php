@@ -42,7 +42,7 @@ if(isset($_GET['pid']) && filter_var($_GET['pid'], FILTER_VALIDATE_INT, array('m
 		}
 
 		# Add the description or a default message
-		echo '<p align="center">' . ((is_null($row['description'])) ? '(No description available)' : $row['description'] . '</p>';
+		echo '<p align="center">' . ((is_null($row['description'])) ? '(No description available)' : $row['description']) . '</p>';
 	} # End of the mysqli_num_rows() IF
 
 	mysqli_close($dbc);

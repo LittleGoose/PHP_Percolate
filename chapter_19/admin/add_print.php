@@ -62,7 +62,7 @@
     	}
 
     	# Check for a description (not required)
-    	$d = (!empty($_POST['description]'])) ? trim($_POST['description']) : NULL;
+    	$d = (!empty($_POST['description'])) ? trim($_POST['description']) : NULL;
 
     	# Validate the artist
     	if(isset($_POST['artist']) && filter_var($_POST['artist'], FILTER_VALIDATE_INT, array('min_range' => 1))) {
