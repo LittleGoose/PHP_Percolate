@@ -15,7 +15,7 @@ if (!empty($_GET['image']) && filter_var($_GET['image'], FILTER_VALIDATE_INT, ar
 	$image = '../../uploads/' . $_GET['image'];
 
 	# Check that the image exists and is a file
-	i(!file_exists($image) || (!is_file($image))) {
+	if(!file_exists($image) || (!is_file($image))) {
 		$image = FALSE;
 	}
 } # End of $_GET['image'] IF

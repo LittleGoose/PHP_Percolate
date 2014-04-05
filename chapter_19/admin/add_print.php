@@ -44,7 +44,7 @@
     			$i = $_FILES['image']['name'];
     		} else { # Couldn't move the file over
     			$errors[] = 'The file could not be moved.';
-    			$temp = $_FILES['image']['temp_name'];
+    			$temp = $_FILES['image']['tmp_name'];
     		}
     	} else { # No uploaded file
     		$errors[] = 'No file was uploaded.';
@@ -55,7 +55,7 @@
     	$s = (!empty($_POST['size'])) ? trim($_POST['size']) : NULL;
 
     	# Check for a price
-    	if(is_numeric($_POST['price']) && trim($_POST['size'] > 0)) {
+    	if(is_numeric($_POST['price']) && ($_POST['size'] > 0)) {
     		$p = (float) $_POST['price'];
     	} else {
     		$errors[] = 'Please enter the print\'s price!';
