@@ -116,7 +116,16 @@
 
             <h4>Chapter 18</h4>
 
-            <a href="http://jesseevers.com/chapter_18/index.php">index.php - 18.5</a><br />            
+            <a href="http://jesseevers.com/chapter_18/index.php">index.php - 18.5</a><br /> 
+
+            <h4>Chapter 19</h4>
+
+            <a href="http://jesseevers.com/chapter_19/index.php">index.php - 19.4</a><br />
+            <a href="http://jesseevers.com/chapter_19/browse_prints.php">browse_prints.php - 19.6</a><br />
+            <a href="http://jesseevers.com/chapter_19/view_cart.php">view_cart.php - 19.10</a><br />
+            <h5>Chapter 19 Admin Links</h5>
+            <a href="http://jesseevers.com/chapter_19/admin/add_artist.php">add_artist.php - 19.1</a><br />
+            <a href="http://jesseevers.com/chapter_19/admin/add_print.php">add_print.php - 19.2</a><br />
 
             <?php 
             # Created by Jesse Evers
